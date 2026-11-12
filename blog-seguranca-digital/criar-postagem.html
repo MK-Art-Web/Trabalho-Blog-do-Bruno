@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Nova Postagem — CyberSeguro</title>
+  <meta name="description" content="Crie e publique uma nova postagem no blog CyberSeguro sobre segurança digital.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">🛡️</span>
+        <span>CyberSeguro</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="transparencia.html">Transparência e IA</a></li>
+          <li><a href="criar-postagem.html">Nova Postagem</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <h1>Criar Nova Postagem</h1>
+      <p>Escreva e publique um novo artigo sobre segurança digital para a comunidade</p>
+    </section>
+
+    <section class="create-post-section">
+      <form class="create-post-form" id="create-post-form" onsubmit="handleCreatePost(event)">
+        <div class="form-group">
+          <label for="post-title">Título da Postagem <span class="required">*</span></label>
+          <input type="text" id="post-title" name="post-title" required placeholder="Ex: Como Identificar um E-mail Falso">
+        </div>
+
+        <div class="form-group">
+          <label for="post-category">Categoria <span class="required">*</span></label>
+          <select id="post-category" name="post-category" required>
+            <option value="" disabled selected>Selecione uma categoria</option>
+            <option value="seguranca">Segurança</option>
+            <option value="golpes">Golpes</option>
+            <option value="privacidade">Privacidade</option>
+            <option value="dicas">Dicas</option>
+            <option value="guia-pratico">Guia Prático</option>
+            <option value="tecnologia">Tecnologia</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="post-author">Autor</label>
+          <input type="text" id="post-author" name="post-author" placeholder="Equipe CyberSeguro">
+        </div>
+
+        <div class="form-group">
+          <label for="post-content">Conteúdo <span class="required">*</span></label>
+          <div class="editor-toolbar">
+            <button type="button" onclick="insertFormat('bold')" title="Negrito"><strong>B</strong></button>
+            <button type="button" onclick="insertFormat('italic')" title="Itálico"><em>I</em></button>
+            <button type="button" onclick="insertFormat('h2')" title="Título H2">H2</button>
+            <button type="button" onclick="insertFormat('h3')" title="Subtítulo H3">H3</button>
+            <button type="button" onclick="insertFormat('link')" title="Link">🔗</button>
+            <button type="button" onclick="insertFormat('list')" title="Lista">📋</button>
+            <button type="button" onclick="insertFormat('quote')" title="Citação">💬</button>
+            <button type="button" onclick="insertFormat('tip')" title="Dica">💡</button>
+            <button type="button" onclick="insertFormat('warning')" title="Aviso">⚠️</button>
+          </div>
+          <textarea id="post-content" name="post-content" class="editor-area" required rows="15" placeholder="Escreva o conteúdo da sua postagem aqui...&#10;&#10;Use os botões da barra de ferramentas acima para formatar o texto.&#10;&#10;Dica: O preview em tempo real aparece abaixo enquanto você digita." oninput="livePreview()"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">📤 Publicar Postagem</button>
+      </form>
+
+      <div class="preview-container" id="post-preview">
+        <h2>👁️ Preview da Postagem</h2>
+        <p class="preview-placeholder">O preview do seu conteúdo aparecerá aqui enquanto você digita...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>🛡️ CyberSeguro</h4>
+        <p>Blog educativo sobre segurança digital, criado por estudantes do curso Técnico em Informática para a comunidade de Acopiara-CE.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="sobre.html">Sobre o Projeto</a></li>
+          <li><a href="transparencia.html">Transparência e IA</a></li>
+          <li><a href="criar-postagem.html">Criar Postagem</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Postagens</h4>
+        <ul>
+          <li><a href="post-phishing.html">Golpes de Phishing</a></li>
+          <li><a href="post-whatsapp.html">Clonagem de WhatsApp</a></li>
+          <li><a href="post-senhas.html">Senhas Seguras</a></li>
+          <li><a href="post-2fa.html">Autenticação em Dois Fatores</a></li>
+          <li><a href="post-wifi.html">Wi-Fi Público</a></li>
+          <li><a href="post-lgpd.html">LGPD e Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 CyberSeguro — Projeto Avaliativo | Ensino Médio Técnico em Informática</p>
+      <p>Este blog não coleta dados pessoais dos visitantes.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

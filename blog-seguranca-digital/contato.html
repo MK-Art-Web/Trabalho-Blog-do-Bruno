@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — CyberSeguro</title>
+  <meta name="description" content="Entre em contato com a equipe CyberSeguro para dúvidas, sugestões ou reportar problemas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">🛡️</span>
+        <span>CyberSeguro</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="transparencia.html">Transparência e IA</a></li>
+          <li><a href="criar-postagem.html">Nova Postagem</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-header">
+      <h1>Contato</h1>
+      <p>Tem dúvidas ou sugestões? Entre em contato conosco!</p>
+    </section>
+
+    <section class="contact-section">
+      <form class="contact-form" id="contact-form" onsubmit="handleContactForm(event)">
+        <div class="form-group">
+          <label for="name">Seu Nome <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Seu E-mail <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Assunto <span class="required">*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Selecione um assunto</option>
+            <option value="duvida">Dúvida sobre segurança</option>
+            <option value="sugestao">Sugestão de tema</option>
+            <option value="problema">Reportar problema</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Sua Mensagem <span class="required">*</span></label>
+          <textarea id="message" name="message" required rows="6" placeholder="Escreva sua mensagem aqui..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary">📨 Enviar Mensagem</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>📬 Outras Formas de Contato</h2>
+
+        <div class="contact-info-grid">
+          <div class="contact-info-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <h3>E-mail</h3>
+              <p><a href="mailto:cyberseguro@escola.edu.br">cyberseguro@escola.edu.br</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h3>Localização</h3>
+              <p>Escola Técnica de Acopiara-CE</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-icon">⏰</span>
+            <div>
+              <h3>Horário de Atendimento</h3>
+              <p>Segunda a Sexta, das 8h às 17h</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <p>🔒 <strong>Nota de Privacidade:</strong> Este formulário não coleta dados pessoais além do necessário para responder sua mensagem. Seus dados não serão compartilhados com terceiros.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>🛡️ CyberSeguro</h4>
+        <p>Blog educativo sobre segurança digital, criado por estudantes do curso Técnico em Informática para a comunidade de Acopiara-CE.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="sobre.html">Sobre o Projeto</a></li>
+          <li><a href="transparencia.html">Transparência e IA</a></li>
+          <li><a href="criar-postagem.html">Criar Postagem</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Postagens</h4>
+        <ul>
+          <li><a href="post-phishing.html">Golpes de Phishing</a></li>
+          <li><a href="post-whatsapp.html">Clonagem de WhatsApp</a></li>
+          <li><a href="post-senhas.html">Senhas Seguras</a></li>
+          <li><a href="post-2fa.html">Autenticação em Dois Fatores</a></li>
+          <li><a href="post-wifi.html">Wi-Fi Público</a></li>
+          <li><a href="post-lgpd.html">LGPD e Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 CyberSeguro — Projeto Avaliativo | Ensino Médio Técnico em Informática</p>
+      <p>Este blog não coleta dados pessoais dos visitantes.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

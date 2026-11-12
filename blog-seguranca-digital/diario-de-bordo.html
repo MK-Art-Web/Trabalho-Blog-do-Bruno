@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário de Bordo de IA — CyberSeguro (Pronto para Impressão / PDF)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .report-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 48px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .report-header {
+      border-bottom: 3px solid var(--primary);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    .report-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .report-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+      background: var(--gray-100);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+    }
+    .print-bar {
+      background: #e8f0fe;
+      border: 1px solid #c2e7ff;
+      padding: 16px 24px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-print {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-print:hover { background: var(--primary-dark); }
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 13.5px;
+    }
+    .report-table th, .report-table td {
+      border: 1px solid var(--gray-300);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .report-table th {
+      background: #f1f3f4;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .report-table tr:nth-child(even) td {
+      background: #fafafa;
+    }
+    .signatures {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--gray-300);
+    }
+    .sig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+    .sig-line {
+      border-top: 1px solid #70757a;
+      padding-top: 6px;
+      font-size: 13px;
+      color: #3c4043;
+      text-align: center;
+    }
+
+    @media print {
+      body { background: #fff !important; }
+      .site-header, .site-footer, .print-bar, .skip-link { display: none !important; }
+      .report-container {
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+      .page-break { page-break-before: always; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-icon">🛡️</span>
+        <span>CyberSeguro</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="transparencia.html">Transparência e IA</a></li>
+          <li><a href="criar-postagem.html">Nova Postagem</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="report-container">
+      
+      <div class="print-bar">
+        <div>
+          <strong>📄 Documento Oficial de Entrega:</strong> Este Diário de Bordo foi preparado para entrega e avaliação.
+        </div>
+        <button class="btn-print" onclick="window.print()">🖨️ Imprimir / Salvar em PDF (Ctrl + P)</button>
+      </div>
+
+      <div class="report-header">
+        <span class="report-badge">Documento Oficial de Avaliação — Célula 01</span>
+        <h1 style="font-size: 26px; color: var(--primary); margin: 6px 0;">Diário de Bordo de Inteligência Artificial</h1>
+        <p style="color: var(--gray-700); font-size: 16px;">Registro crítico, ético e transparente do uso de IA generativa no projeto do Blog CyberSeguro</p>
+        
+        <div class="report-meta">
+          <div><strong>Escola:</strong> EEEP de Acopiara</div>
+          <div><strong>Curso:</strong> Ensino Médio Técnico em Informática</div>
+          <div><strong>Série / Turma:</strong> 2º Ano "A"</div>
+          <div><strong>Duração:</strong> 4 Semanas</div>
+          <div><strong>Projeto:</strong> Blog de Segurança Digital para a Comunidade</div>
+          <div><strong>Data de Finalização:</strong> 12/11/2024</div>
+        </div>
+      </div>
+
+      <section>
+        <h2>1. Declaração de Princípios e Uso Ético da IA</h2>
+        <p>Em conformidade com a situação-aprendizagem do projeto, a equipe utilizou ferramentas de Inteligência Artificial (ChatGPT e Google Gemini) exclusivamente na condição de <strong>ferramentas de apoio e assistência</strong>, e não como substitutas do raciocínio e da autoria dos estudantes.</p>
+        <p><strong>Diretrizes seguidas rigorosamente pelo grupo:</strong></p>
+        <ul>
+          <li><strong>Proibição de cópia cega:</strong> Nenhuma resposta foi utilizada em sua forma crua. Todo o material passou por reescrita, adaptação para a realidade local de Acopiara e simplificação linguística.</li>
+          <li><strong>Dupla verificação técnica:</strong> Todo conceito técnico, estatística ou recomendação prática foi checado em ao menos 2 fontes oficiais de referência (CERT.br, ANPD, Cartilha de Segurança do NIC.br, Banco Central e SaferNet).</li>
+          <li><strong>Checagem ativa de alucinações:</strong> Links, referências e estatísticas sugeridas pelas IAs foram individualmente verificados e corrigidos caso não existissem ou fossem inexatos.</li>
+        </ul>
+      </section>
+
+      <section style="margin-top: 32px;">
+        <h2>2. Quadro Cronológico de Prompts, Aproveitamentos e Correções</h2>
+        <p>Abaixo está o registro sistemático dos principais comandos executados, das soluções aproveitadas e dos conteúdos descartados ou retificados pela equipe:</p>
+
+        <div style="overflow-x: auto;">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th style="width: 15%;">Etapa / IA</th>
+                <th style="width: 32%;">Comando (Prompt) Utilizado</th>
+                <th style="width: 26%;">O Que Foi Aproveitado</th>
+                <th style="width: 27%;">O Que Foi Corrigido ou Descartado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Semana 1</strong><br><span style="color: var(--primary);">ChatGPT-4o</span></td>
+                <td><em>"Sugira 10 nomes de projetos e blogs voltados a segurança da informação para comunidades do interior do Ceará, com tom acolhedor, simples e protetor."</em></td>
+                <td>A escolha da palavra-chave 'CyberSeguro' e o slogan 'Seu escudo digital na comunidade'.</td>
+                <td>Nomes rebuscados em inglês corporativo (ex: 'ThreatIntel Hub', 'Acopiara CyberShield') foram descartados por afastarem o público leigo.</td>
+              </tr>
+              <tr>
+                <td><strong>Semana 1</strong><br><span style="color: var(--accent);">Gemini</span></td>
+                <td><em>"Quais são os principais desafios de segurança digital enfrentados por pequenos comerciantes que vendem no WhatsApp e idosos com apps bancários?"</em></td>
+                <td>Mapeamento do golpe do Pix agendado falso, clonagem do WhatsApp comercial e golpes de prova de vida falsa.</td>
+                <td>Gemini sugeriu medidas caras de segurança corporativa (firewall de hardware). Descartamos e focamos em confirmação em duas etapas e extrato bancário oficial.</td>
+              </tr>
+              <tr>
+                <td><strong>Semana 2</strong><br><span style="color: var(--primary);">ChatGPT-4o</span></td>
+                <td><em>"Explique o que é phishing em linguagem leiga para pessoas idosas, usando a metáfora de uma pescaria e cartas falsas."</em></td>
+                <td>A analogia da 'isca apetitosa' e os exemplos de cartas falsas de banco deixadas no portão.</td>
+                <td>A IA gerou uma estatística inventada sem citação ('85% das pessoas caem'). Descartamos a frase e inserimos números oficiais do Cetic.br/CERT.br.</td>
+              </tr>
+              <tr>
+                <td><strong>Semana 2</strong><br><span style="color: var(--accent);">Gemini</span></td>
+                <td><em>"Crie uma explicação clara sobre a diferença entre golpe do código de 6 dígitos do WhatsApp e clonagem por SIM swap da operadora."</em></td>
+                <td>A estrutura didática dividindo o ataque de engenharia social (conversa fiada) do ataque de troca de chip físico.</td>
+                <td>O Gemini descreveu o menu do WhatsApp com nomenclaturas antigas do Android 9. Testamos no celular atual e atualizamos os caminhos de navegação.</td>
+              </tr>
+              <tr>
+                <td><strong>Semana 3</strong><br><span style="color: var(--primary);">ChatGPT-4o</span></td>
+                <td><em>"Elabore um checklist em 8 passos simples para uma pessoa comum proteger suas contas de WhatsApp, Google e Instagram com 2FA."</em></td>
+                <td>O formato de checklist direto com caixas de verificação e a divisão por aplicativo.</td>
+                <td>A IA sugeriu usar SMS como método principal. Corrigimos indicando o Google Authenticator como opção superior e explicando a vulnerabilidade do SMS.</td>
+              </tr>
+              <tr>
+                <td><strong>Semana 3</strong><br><span style="color: var(--accent);">Gemini</span></td>
+                <td><em>"Revise a semântica de formulários HTML e as diretrizes WCAG 2.1 AA de acessibilidade para leitores de tela e contraste."</em></td>
+                <td>Inclusão de <code>&lt;a href='#main' class='skip-link'&gt;</code>, contraste adequado de texto/fundo (4.5:1) e atributos <code>aria-label</code> nos botões.</td>
+                <td>O código sugerido pela IA utilizava scripts externos pesados via CDN. Decidimos manter código nativo e leve sem dependências externas.</td>
+              </tr>
+              <tr>
+                <td><strong>Semana 4</strong><br><span style="color: var(--primary);">ChatGPT-4o</span></td>
+                <td><em>"Como sintetizar a LGPD para comerciantes de mercadinhos de bairro em Acopiara, explicando o que fazer com os cadernos de clientes e CPF?"</em></td>
+                <td>Dicas práticas sobre não exigir CPF desnecessário e não deixar cadernos de fiado visíveis no balcão.</td>
+                <td>O texto inicial falava em sanções milionárias imediatas. Corrigimos informando sobre o papel educativo da ANPD e a resolução para agentes de pequeno porte.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="page-break"></div>
+
+      <section style="margin-top: 32px;">
+        <h2>3. Matriz de Fontes Oficiais Utilizadas para Checagem</h2>
+        <p>Abaixo estão os repositórios oficiais que serviram de critério de validação e desempate diante das sugestões da IA:</p>
+        <div style="background: var(--gray-100); padding: 20px; border-radius: var(--radius-sm);">
+          <ul>
+            <li><strong>CERT.br (Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil):</strong> Cartilha de Segurança para Internet (Fascículos Senhas, Redes Sociais, Golpes na Internet e Dispositivos Móveis).</li>
+            <li><strong>ANPD (Autoridade Nacional de Proteção de Dados):</strong> Guia Orientativo de Segurança da Informação para Agentes de Tratamento de Pequeno Porte e definições da Lei 13.709/2018.</li>
+            <li><strong>Banco Central do Brasil (Bacen):</strong> Orientações sobre o Mecanismo Especial de Devolução (MED) do Pix e golpes financeiros.</li>
+            <li><strong>SaferNet Brasil:</strong> Cartilhas de cidadania digital e denúncias de crimes cibernéticos.</li>
+            <li><strong>Documentação Oficial WhatsApp (Meta) e Google Safety Center:</strong> Tutoriais oficiais sobre confirmação em duas etapas e chaves de acesso (passkeys).</li>
+          </ul>
+        </div>
+      </section>
+
+      <section style="margin-top: 32px;">
+        <h2>4. Conclusão da Equipe sobre o Uso de IA no Projeto</h2>
+        <p>A experiência prática revelou que ferramentas de inteligência artificial generativa são excelentes assistentes para aceleração criativa e suporte estrutural, mas <strong>inadequadas como fontes de verdade definitivas</strong>. A necessidade contínua de adaptação de vocabulário, correção de instruções desatualizadas e eliminação de alucinações reforçou o papel insubstituível do estudante técnico como curador crítico da tecnologia.</p>
+        <p>O resultado final é um blog que reflete os anseios da comunidade de Acopiara, respaldado pela ciência da computação e pela ética profissional.</p>
+      </section>
+
+      <div class="signatures">
+        <h3>Assinaturas dos Integrantes da Equipe:</h3>
+        <div class="sig-grid">
+          <div class="sig-line">
+            <strong>Ana Silva</strong><br>Coordenadora de Projeto
+          </div>
+          <div class="sig-line">
+            <strong>Bruno Santos</strong><br>Pesquisador de Conteúdo
+          </div>
+          <div class="sig-line">
+            <strong>Carla Oliveira</strong><br>Redatora e Revisora
+          </div>
+          <div class="sig-line">
+            <strong>Daniel Costa</strong><br>Designer e UX
+          </div>
+          <div class="sig-line">
+            <strong>Elena Souza</strong><br>Responsável Técnica
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom" style="margin: 0; padding: 24px; text-align: center;">
+      <p>© 2024 CyberSeguro — Diário de Bordo de IA para fins avaliativos | EEEP Acopiara-CE</p>
+    </div>
+  </footer>
+
+</body>
+</html>
